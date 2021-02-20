@@ -24,13 +24,17 @@
         } catch (e) {}
         // Write Writer
         try {
-            win.document.write(
-                `By <a href="${
-                    doc.querySelector(".e1jsehar0").href
-                }" target='_blank'>${
-                    doc.querySelector(".e1jsehar0").innerText
-                }</a></span>`
+            let w = [];
+            Array.from(doc.querySelectorAll("[itemprop=name]")).forEach(
+                (elm) => {
+                    w.push(
+                        `<a href="${elm.querySelector("a").href}">${
+                            elm.innerText
+                        }</a>`
+                    );
+                }
             );
+            win.document.write(`By ${w.join(", ")}`);
         } catch (e) {}
         //
         try {
