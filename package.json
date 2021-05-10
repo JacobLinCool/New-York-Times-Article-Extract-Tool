@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/JacobLinCool/New-York-Times-Article-Extract-Tool",
   "devDependencies": {
-    "terser": "^5.6.0"
+    "terser": "^5.7.0"
   }
 }
